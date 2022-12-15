@@ -1,1 +1,16 @@
-Hello This is manish
+aviVersion: v1
+kind: pod 
+metadata:
+  name: testapp
+  labels:
+   testapp
+spec:
+  containers:
+  - name: testapp
+    image: httpd
+    resources:
+     limits: 
+      memory: "128Mi"
+      cpu: "200m"
+    ports:
+     - containerPort: 81
