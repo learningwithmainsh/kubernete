@@ -1,0 +1,18 @@
+
+kind: apiVersion: v1
+kind: Pod
+metadata:
+  name: mavenapp
+  labels:
+    name: mavenapp
+spec:
+  containers:
+  - name: mavenapp
+    image: manishgenius/maven-web-application:1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
+
