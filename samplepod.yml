@@ -3,10 +3,10 @@ kind: Pod
 metadata:
   name: myapp
   labels:
-    name: myapp
+    app: myapp
 spec:
   containers:
-  - app: myapp
+  - name: myapp
     image: nginx
     resources:
       limits:
